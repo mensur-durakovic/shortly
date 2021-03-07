@@ -1,0 +1,89 @@
+.link-input-wrapper {
+  padding: 0 $spacer--medium;
+  width: 100vw;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 1440px) {
+    padding: 0 $spacer--largest * 2;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    padding: $spacer--large;
+    background-color: $dark-violet;
+    background-image: url("../../assets/bg-shorten-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right top;
+    border-radius: $br-base;
+    width: 100%;
+
+    @media (min-width: 1440px) {
+      background-image: url("../../assets/bg-shorten-desktop.svg");
+      background-size: cover;
+      padding: $spacer--large * 2;
+      flex-direction: row;
+    }
+  }
+
+  input[type="url"] {
+    height: 50px;
+    margin-bottom: $spacer--medium;
+    border-radius: $br-base;
+    border: 0;
+    padding: $spacer--small * 2;
+    box-sizing: border-box;
+    outline: none;
+    font-family: $font-family;
+    color: $gray;
+    font-size: $font-size--base;
+
+    @media (min-width: 1440px) {
+      margin-bottom: 0;
+      margin-right: $spacer--large;
+      width: 100%;
+    }
+  }
+
+  input[type="submit"] {
+    border-radius: $br-base;
+    height: 50px;
+    box-sizing: border-box;
+    padding: $spacer--small $spacer--small * 3;
+    font-weight: 700;
+    line-height: 1;
+    color: white;
+    background-color: $cyan;
+    font-size: $font-size--base;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $cyan-light;
+      transition: 0.1s;
+    }
+
+    @media (min-width: 1440px) {
+      min-width: 200px;
+      font-size: $font-size--base * 1.2;
+      border-radius: $br-base;
+      padding: $spacer--small $spacer--small * 3;
+    }
+  }
+
+  &-bg {
+    position: absolute;
+    background-color: $gray-bg;
+    height: 50%;
+    width: calc(100% + #{$spacer--medium});
+    bottom: 0;
+    left: -$spacer--medium;
+    z-index: -1;
+  }
+}

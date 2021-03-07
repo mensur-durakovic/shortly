@@ -1,0 +1,21 @@
+.footer-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    margin: 0 $spacer--small;
+
+    &:hover {
+      fill: $cyan-light;
+      transition: 0.1s;
+    }
+
+    &:first-child {
+      margin: 0 $spacer--small 0 0;
+    }
+    &:last-child {
+      margin: 0 0 0 $spacer--small;
+    }
+  }
+}

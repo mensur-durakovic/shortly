@@ -1,0 +1,27 @@
+@import "settings";
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+
+  font-weight: 500;
+  font-size: $font-size--medium;
+  overflow-x: hidden;
+  color: $very-dark-violet;
+
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+button {
+  font-family: $font-family;
+  outline: none;
+  border: 0;
+}

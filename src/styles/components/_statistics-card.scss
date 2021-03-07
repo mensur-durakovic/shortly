@@ -1,0 +1,129 @@
+.statistics-card {
+  padding: $spacer--medium * 3 $spacer--medium $spacer--default * 2
+    $spacer--medium;
+  background-color: white;
+  border-radius: $br-base;
+  position: relative;
+  box-sizing: border-box;
+
+  @media (min-width: 1440px) {
+    max-width: 425px;
+    padding: $spacer--medium * 4 $spacer--medium * 2 $spacer--default * 2
+      $spacer--medium * 2;
+    text-align: left;
+  }
+
+  &:nth-of-type(3) {
+    @media (min-width: 1440px) {
+      margin-top: $spacer--medium * 5;
+    }
+  }
+  &:nth-of-type(5) {
+    @media (min-width: 1440px) {
+      margin-top: $spacer--medium * 10;
+    }
+  }
+
+  &-stripe {
+    height: 75px; //40px + 35px for icon height
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:nth-of-type(2) {
+      @media (min-width: 1440px) {
+        margin-top: $spacer--medium * 5;
+      }
+    }
+    &:nth-of-type(4) {
+      @media (min-width: 1440px) {
+        margin-top: $spacer--medium * 5;
+      }
+    }
+
+    @media (min-width: 1440px) {
+      width: 50px;
+    }
+
+    &-line {
+      width: 5px;
+      height: 100%;
+      background-color: $cyan;
+
+      @media (min-width: 1440px) {
+        height: 5px;
+        width: 100%;
+      }
+    }
+  }
+
+  &-icon {
+    position: absolute;
+    border-radius: 50%;
+    top: -35px;
+    left: calc(50% - 35px);
+    background-color: $dark-violet;
+    height: 70px;
+    min-height: 70px;
+    max-height: 70px;
+    width: 70px;
+    min-width: 70px;
+    max-width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: 1440px) {
+      left: $spacer--medium * 2;
+      top: -45px;
+      height: 90px;
+      min-height: 90px;
+      max-height: 90px;
+      width: 90px;
+      min-width: 90px;
+      max-width: 90px;
+    }
+
+    img {
+      height: 40px;
+      min-height: 40px;
+      max-height: 40px;
+      width: 40px;
+      min-width: 40px;
+      max-width: 40px;
+
+      @media (min-width: 1440px) {
+        height: 50px;
+        min-height: 50px;
+        max-height: 50px;
+        width: 50px;
+        min-width: 50px;
+        max-width: 50px;
+      }
+    }
+  }
+
+  &-title {
+    margin: 0;
+    font-size: $font-size--tertiary * 2;
+    line-height: 1;
+    letter-spacing: -2px;
+    margin-bottom: $spacer--medium;
+    font-weight: 700;
+
+    @media (min-width: 1440px) {
+      font-size: $font-size--base * 2;
+    }
+  }
+  &-text {
+    margin: 0;
+    font-size: $font-size--base;
+    font-weight: 500;
+    color: $gray;
+
+    @media (min-width: 1440px) {
+      font-size: $font-size--medium;
+    }
+  }
+}

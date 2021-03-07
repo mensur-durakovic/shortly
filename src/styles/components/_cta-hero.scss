@@ -1,0 +1,55 @@
+.cta-hero {
+  padding: $spacer--large * 3 $spacer--medium $spacer--large * 3 $spacer--medium;
+  background-color: $dark-violet;
+  background-image: url("../../assets/bg-boost-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 1440px) {
+    background-image: url("../../assets/bg-boost-desktop.svg");
+    background-size: cover;
+  }
+
+  p {
+    margin: 0;
+    font-size: $font-size--secondary * 2;
+    font-weight: 700;
+    color: white;
+    line-height: 1;
+    letter-spacing: -2px;
+    margin-bottom: $spacer--medium;
+    @media (min-width: 1440px) {
+      font-size: $font-size--secondary * 3.5;
+      margin-bottom: $spacer--medium * 2;
+    }
+  }
+
+  button {
+    border-radius: $br-base * 3;
+    height: 55px;
+    box-sizing: border-box;
+    padding: $spacer--small $spacer--small * 3;
+    font-weight: 700;
+    color: white;
+    background-color: $cyan;
+    font-size: $font-size--large;
+    cursor: pointer;
+    @media (min-width: 1440px) {
+      font-size: $font-size--base * 2;
+      height: 75px;
+      border-radius: $br-base * 4;
+      padding: $spacer--small $spacer--small * 5;
+    }
+
+    &:hover {
+      background-color: $cyan-light;
+      transition: 0.1s;
+    }
+  }
+}

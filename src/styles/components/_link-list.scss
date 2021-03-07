@@ -1,0 +1,10 @@
+.link-list {
+  padding: $spacer--medium $spacer--medium 0 $spacer--medium;
+  width: 100vw;
+  box-sizing: border-box;
+  background-color: $gray-bg;
+
+  @media (min-width: 1440px) {
+    padding: $spacer--largest * 2 $spacer--largest * 2 0 $spacer--largest * 2;
+  }
+}

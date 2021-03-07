@@ -1,0 +1,19 @@
+@import "./base/fonts.scss";
+@import "./base/settings";
+@import "./base/base.scss";
+
+//components
+@import "./components/header";
+@import "./components/hero";
+@import "./components/link-input-wrapper";
+@import "./components/shortened-link";
+@import "./components/link-list";
+@import "./components/advanced-statistics";
+@import "./components/statistics-card";
+@import "./components/cta-hero";
+@import "./components/footer";
+@import "./components/footer-links";
+@import "./components/footer-icons";
+
+//pages
+@import "./pages/home-page.scss";

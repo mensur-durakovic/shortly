@@ -57,7 +57,7 @@ export default function LinkInput(props) {
               Please enter valid URL
             </span>
           ) : null}
-          {!submitting ? (
+          {submitting ? (
             <span className="link-input-wrapper-wait-message">
               Please wait...
             </span>

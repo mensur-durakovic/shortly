@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-
-export default function ShortenedLink(props) {
+import PropTypes from "prop-types";
+function ShortenedLink(props) {
   const [isCopied, setIsCopied] = useState(false);
   const { linkData } = props;
   const { originalLink, shortLink } = linkData;
@@ -31,3 +31,12 @@ export default function ShortenedLink(props) {
     </div>
   );
 }
+
+ShortenedLink.propTypes = {
+  linkData: PropTypes.shape({
+    originalLink: PropTypes.string.isRequired,
+    shortLink: PropTypes.string.isRequired,
+  }),
+};
+
+export default ShortenedLink;

@@ -1,10 +1,10 @@
 import React from "react";
+import PropTypes from "prop-types";
 import ChartIcon from "../assets/icon-brand-recognition.svg";
 import MetricsIcon from "../assets/icon-detailed-records.svg";
 import BrushesIcon from "../assets/icon-fully-customizable.svg";
 import { CHART, METRICS, BRUSHES } from "../constants";
-
-export default function StatisticsCard(props) {
+function StatisticsCard(props) {
   const { cardData, isLast } = props;
 
   const getIconImage = () => {
@@ -38,3 +38,13 @@ export default function StatisticsCard(props) {
     </>
   );
 }
+
+StatisticsCard.propTypes = {
+  isLast: PropTypes.bool,
+  cardData: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+  }),
+};
+
+export default StatisticsCard;

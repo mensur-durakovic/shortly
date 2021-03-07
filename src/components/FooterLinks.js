@@ -1,6 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-export default function FooterLinks(props) {
+function FooterLinks(props) {
   const { title, links } = props;
   return (
     <div className="footer-links">
@@ -13,3 +14,15 @@ export default function FooterLinks(props) {
     </div>
   );
 }
+
+FooterLinks.propTypes = {
+  title: PropTypes.string.isRequired,
+  links: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
+
+export default FooterLinks;

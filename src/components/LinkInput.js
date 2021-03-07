@@ -1,24 +1,23 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
+
 import { validURL } from "../utils";
 import { shortenUrl } from "../api";
 
-export default function LinkInput(props) {
+function LinkInput(props) {
   const [url, setUrl] = useState("");
   const [error, setError] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const { saveNewLinkHandler } = props;
 
   const submitFormHandler = (event) => {
-    console.log("submitFormHandler");
     event.preventDefault();
     const urlValid = validURL(url);
-    console.log("submitFormHandler valid", urlValid);
     setError(!urlValid);
     if (urlValid) {
       setSubmitting(true);
       shortenUrl(url)
         .then((response) => {
-          console.log("response", response);
           setSubmitting(false);
           const result = {
             originalLink: response.data.result.original_link,
@@ -69,3 +68,9 @@ export default function LinkInput(props) {
     </section>
   );
 }
+
+LinkInput.propTypes = {
+  saveNewLinkHandler: PropTypes.func.isRequired,
+};
+
+export default LinkInput;

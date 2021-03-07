@@ -6,14 +6,23 @@ import LinkList from "../containers/LinkList";
 import AdvancedStatistics from "../containers/AdvancedStatistics";
 import CtaHero from "../components/CtaHero";
 import Footer from "../containers/Footer";
+import useLocalStorage from "../hooks/useLocalStorage";
 
 function Home() {
+  const [usersLinks, setUsersLinks] = useLocalStorage("usersLinks", []);
+
+  const saveNewLinkHandler = (shortenedLinkData) => {
+    console.log("shortenedLinkData", shortenedLinkData);
+    const newUserLinks = [...usersLinks, shortenedLinkData];
+    setUsersLinks(newUserLinks);
+  };
+
   return (
     <main className="home-page">
       <Header />
       <Hero />
-      <LinkInput />
-      <LinkList />
+      <LinkInput saveNewLinkHandler={saveNewLinkHandler} />
+      <LinkList usersLinks={usersLinks} />
       <AdvancedStatistics />
       <CtaHero />
       <Footer />

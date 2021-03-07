@@ -42,7 +42,7 @@ export default function Footer() {
 
   return (
     <footer>
-      <LogoImage fill="white" />
+      <LogoImage fill="white" className="footer-logo" />
       <div className="footer-nav">
         {linkGroups.map((group) => (
           <FooterLinks

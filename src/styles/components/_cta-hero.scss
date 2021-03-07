@@ -23,10 +23,10 @@
     color: white;
     line-height: 1;
     letter-spacing: -2px;
-    margin-bottom: $spacer--medium;
+    margin-bottom: $spacer--medium * 2;
     @media (min-width: 1440px) {
       font-size: $font-size--secondary * 3.5;
-      margin-bottom: $spacer--medium * 2;
+      margin-bottom: $spacer--medium * 3;
     }
   }
 
